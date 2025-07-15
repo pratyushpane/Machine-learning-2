@@ -2,6 +2,14 @@ import streamlit as st
 import joblib
 import pandas as pd
 from utils import remove_stopwords_and_get_unique, analyze_sentiment
+# streamlit_app.py
+import nltk
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)   # if you use stopwords
+
+from nltk.tokenize import word_tokenize
+...
+
 
 # Load models and vectorizer
 dt_model = joblib.load("model_dt.pkl")
