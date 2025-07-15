@@ -3,6 +3,11 @@ import joblib
 import pandas as pd
 from utils import remove_stopwords_and_get_unique, analyze_sentiment
 
+# ✅ Add this block for NLTK data download
+import nltk
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
+
 # Load models and vectorizer
 dt_model = joblib.load("model_dt.pkl")
 rf_model = joblib.load("model_rf.pkl")
